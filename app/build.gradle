@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.0'
+
+    defaultConfig {
+        applicationId "com.ayalus.exoplayer2example"
+        minSdkVersion 18
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:support-v4:26.1.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:26.+'
+    implementation 'com.android.support:cardview-v7:26.+'
+    compile 'com.google.android.exoplayer:exoplayer:r2.5.1'
+    compile 'com.aurelhubert:ahbottomnavigation:+'
+    compile 'com.github.jeancsanchez:JcPlayer:2.6.10'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'com.facebook.fresco:fresco:1.9.0'
+    implementation 'com.matthew-tamlin:sound-sword:1.0.1'
+    compile 'com.github.Triggertrap:SeekArc:v1.1'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.robinhood.ticker:ticker:2.0.0'
+}
